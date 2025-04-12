@@ -20,8 +20,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        SharedPreferences prefs = getSharedPreferences("historial", MODE_PRIVATE);
-        prefs.edit().clear().apply();
+        //SharedPreferences prefs = getSharedPreferences("historial", MODE_PRIVATE);
+        //prefs.edit().clear().apply();
+        //Estaas dos lineas son para borrar el historial cada que cierras y abres la app
+        //me pareció interesante xd
         setTitle("AppSIoT - Lab 2");
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

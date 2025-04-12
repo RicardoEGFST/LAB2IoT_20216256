@@ -142,7 +142,7 @@ public class QuizActivity extends AppCompatActivity {
                         botones[i].setBackgroundColor(Color.parseColor("#A5D6A7")); // verde
                     } else {
                         botones[i].setBackgroundColor(Color.parseColor("#EF9A9A")); // rojo
-                        botones[respuestas[index]].setBackgroundColor(Color.parseColor("#A5D6A7"));
+
                     }
                 }
             }
@@ -226,14 +226,14 @@ public class QuizActivity extends AppCompatActivity {
         editor.putString("juego_" + n, "Juego " + n + ": Canceló");
         editor.putInt("total_juegos", n);
         editor.apply();
-        finish(); // Cierra esta Activity
+        finish();
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_estadisticas) {
-            // Aquí abres la pantalla de estadísticas
+            // Estadísticas
             Intent intent = new Intent(this, EstadisticasActivity.class);
             startActivity(intent);
             return true;
